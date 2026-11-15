@@ -1,0 +1,368 @@
+[
+  {
+    "id": "dust_storm",
+    "weight": 3,
+    "negative": true,
+    "art": "dust_storm",
+    "text": {
+      "fr": "Une tempête de poussière arrive sur Mars. De forts vents soulèvent la poussière. La poussière cache une partie de la lumière du Soleil. Les panneaux solaires produisent moins d'énergie.",
+      "en": "A dust storm is arriving on Mars. Strong winds lift the dust. The dust hides some sunlight. Solar panels produce less energy."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Passer en mode économie d'énergie",
+          "en": "Switch to power-saving mode"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": 0,
+          "o2": 0,
+          "food": -5,
+          "protection": 0
+        },
+        "status": {
+          "name": "dust",
+          "days": 3
+        },
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Continuer normalement avec les batteries",
+          "en": "Keep normal activity with batteries"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -12,
+          "o2": 0,
+          "food": 0,
+          "protection": 0
+        },
+        "status": {
+          "name": "dust",
+          "days": 2
+        },
+        "risk": "medium"
+      }
+    ],
+    "factId": "dust_light"
+  },
+  {
+    "id": "solar_flare",
+    "weight": 2,
+    "negative": true,
+    "art": "solar_flare",
+    "text": {
+      "fr": "Éruption solaire ! Le Soleil envoie des rayons dangereux. Des radiations arrivent vers la base. Protège l'équipage dans l'abri.",
+      "en": "Solar flare! The Sun is sending dangerous rays. Radiation is arriving at the base. Protect the crew in the shelter."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Aller tout de suite dans l'abri",
+          "en": "Go to the shelter right away"
+        },
+        "cost": 30,
+        "effects": {
+          "energy": -5,
+          "o2": 0,
+          "food": 0,
+          "protection": -5
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Rester avec le blindage actuel",
+          "en": "Stay with current shielding"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": 0,
+          "o2": 0,
+          "food": 0,
+          "protection": -18
+        },
+        "status": null,
+        "risk": "high"
+      }
+    ],
+    "factId": "rad_curiosity"
+  },
+  {
+    "id": "power_failure",
+    "weight": 2,
+    "negative": true,
+    "art": "power_failure",
+    "text": {
+      "fr": "Une panne électrique : un fil a grillé. L'énergie de la base est en danger.",
+      "en": "A power failure: a wire burned out. The base energy is at risk."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Changer la pièce cassée (−40 crédits)",
+          "en": "Replace the broken part (−40 credits)"
+        },
+        "cost": 40,
+        "effects": {
+          "energy": 0,
+          "o2": 0,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Isoler le circuit en panne (−15 énergie)",
+          "en": "Isolate the broken circuit (−15 energy)"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -15,
+          "o2": 0,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "medium"
+      }
+    ],
+    "factId": "moxie_o2"
+  },
+  {
+    "id": "oxygen_leak",
+    "weight": 2,
+    "negative": true,
+    "art": "oxygen_leak",
+    "text": {
+      "fr": "Une petite fente laisse s'échapper de l'oxygène. L'air de la base baisse doucement.",
+      "en": "A small crack is letting oxygen escape. The air in the base is slowly dropping."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Boucher la fente tout de suite",
+          "en": "Seal the crack right away"
+        },
+        "cost": 25,
+        "effects": {
+          "energy": 0,
+          "o2": -4,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Forcer le générateur d'oxygène",
+          "en": "Push the oxygen generator harder"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -10,
+          "o2": -12,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "high"
+      }
+    ],
+    "factId": "moxie_o2"
+  },
+  {
+    "id": "food_shortage",
+    "weight": 2,
+    "negative": true,
+    "art": "food_shortage",
+    "text": {
+      "fr": "Il reste moins de nourriture que prévu. Les stocks baissent trop vite.",
+      "en": "There is less food left than planned. Stocks are dropping too fast."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Rationner l'équipage temporairement",
+          "en": "Apply temporary crew rationing"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": 0,
+          "o2": 0,
+          "food": -10,
+          "protection": -4
+        },
+        "status": null,
+        "risk": "medium"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Traiter et purifier les bacs (-35 crédits)",
+          "en": "Sterilize and treat growth medium (-35 credits)"
+        },
+        "cost": 35,
+        "effects": {
+          "energy": -4,
+          "o2": 0,
+          "food": -2,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      }
+    ],
+    "factId": "aph_greenhouse"
+  },
+  {
+    "id": "ice_discovery",
+    "weight": 2,
+    "negative": false,
+    "art": "ice_discovery",
+    "text": {
+      "fr": "Bonne nouvelle : les capteurs ont trouvé de la glace d'eau ! Tu peux l'utiliser pour la serre ou la protection.",
+      "en": "Good news: sensors found water ice! You can use it for the greenhouse or for protection."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Extraire pour alimenter les serres et l'équipage",
+          "en": "Extract water for hydroponics and crew"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -5,
+          "o2": 5,
+          "food": 15,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Couler l'eau dans les doubles parois du dôme",
+          "en": "Fill dome hollow double-walls with water"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -5,
+          "o2": 0,
+          "food": 0,
+          "protection": 18
+        },
+        "status": null,
+        "risk": "low"
+      }
+    ],
+    "factId": "ice_subsurface"
+  },
+  {
+    "id": "comm_blackout",
+    "weight": 2,
+    "negative": true,
+    "art": "comm_blackout",
+    "text": {
+      "fr": "Le signal radio avec la Terre est coupé. On n'entend plus bien la Terre pour le moment.",
+      "en": "The radio signal with Earth is cut. We cannot hear Earth well for now."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Relancer l'antenne à pleine puissance (-10 énergie)",
+          "en": "Reboot antenna at full transmission power (-10 energy)"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -10,
+          "o2": 0,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Attendre la fin de l'occultation en mode autonome",
+          "en": "Await orbital window in autonomous standby"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": 0,
+          "o2": 0,
+          "food": 0,
+          "protection": -4
+        },
+        "status": null,
+        "risk": "low"
+      }
+    ],
+    "factId": "comm_delay"
+  },
+  {
+    "id": "calm_sol",
+    "weight": 3,
+    "negative": false,
+    "art": "calm_sol",
+    "text": {
+      "fr": "Sol calme aujourd'hui. Aucun gros phénomène. Profite-en pour renforcer la base.",
+      "en": "Calm Sol today. No major phenomenon. Use it to strengthen the base."
+    },
+    "choices": [
+      {
+        "id": "A",
+        "label": {
+          "fr": "Recharger au maximum les accumulateurs solaires",
+          "en": "Maximize solar storage recharging"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": 12,
+          "o2": 0,
+          "food": 0,
+          "protection": 0
+        },
+        "status": null,
+        "risk": "low"
+      },
+      {
+        "id": "B",
+        "label": {
+          "fr": "Organiser une mission de prélèvement d'échantillons",
+          "en": "Conduct science EVA soil sampling"
+        },
+        "cost": 0,
+        "effects": {
+          "energy": -4,
+          "o2": 0,
+          "food": 0,
+          "protection": 8
+        },
+        "status": null,
+        "risk": "low"
+      }
+    ],
+    "factId": "mars_sol_duration"
+  }
+]

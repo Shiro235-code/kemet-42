@@ -1,0 +1,115 @@
+# DevSecOps Git Guardian - Security .gitignore
+# Generated automatically to prevent secret leaks
+
+# LOCAL
+.env
+.env.local
+.env.*.local
+
+# PRODUCTION
+.env.production
+
+# DEVELOPMENT
+.env.development
+
+# STORED
+.credentials
+
+# SECRET
+.secrets
+secrets.json
+
+# CREDENTIAL
+credentials.json
+
+# PRIVATE
+*.key
+*.pem
+
+# SSH
+.ssh
+id_rsa*
+
+# DSA
+id_dsa*
+
+# CERTIFICATE
+*.crt
+
+# NODE.JS
+node_modules/
+
+# LOCK
+package-lock.json
+
+# YARN
+yarn.lock
+
+# COMPILED
+dist/
+
+# BUILD
+build/
+
+# VS
+.vscode/
+
+# INTELLIJ
+.idea/
+
+# VISUAL
+.vs/
+
+# VIM
+*.swp
+*.swo
+
+# BACKUP
+*~
+
+# MACOS
+.DS_Store
+
+# WINDOWS
+Thumbs.db
+
+# LOG
+*.log
+logs/
+
+# TEMPORARY
+tmp/
+temp/
+
+# DATABASE
+*.db
+
+# SQLITE
+*.sqlite
+
+# MONGODB
+.mongodb
+
+# DOCKER
+.dockerignore
+
+# AWS
+.aws
+
+# GOOGLE
+google-cloud-key.json
+.gcloud
+
+# AZURE
+.azure
+
+
+# Added by DevSecOps Git Guardian
+.env
+.env.local
+.env.*.local
+*.key
+*.pem
+.ssh
+.credentials
+secrets.json
